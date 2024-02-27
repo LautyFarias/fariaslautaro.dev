@@ -1,0 +1,31 @@
+---
+import Button from "@/components/ui/Button.astro"
+
+import GemIcon from "@/components/icons/Gem.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
+import GlobeIcon from "@/components/icons/Globe.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import ReaderIcon from "@/components/icons/Reader.astro"
+---
+
+<div>
+  <header>
+    <h1>Farias Lautaro</h1>
+    <h2>Backend Developer con +3 años de experiencia.</h2>
+  </header>
+
+  <section>
+    <span><GlobeIcon /></span>Buenos Aires, Argentina.
+    <span><GemIcon />21 años.</span>
+  </section>
+
+  <section>
+    <Button><GitHubIcon /></Button>
+    <Button><LinkedInIcon /></Button>
+    <Button><ReaderIcon /><span>Descargar CV</span></Button>
+  </section>
+
+  <aside>
+    <img src="/src/images/Person.svg" alt="Farias Lautaro" />
+  </aside>
+</div>
