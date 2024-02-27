@@ -1,5 +1,17 @@
 ---
+import About from "@/components/About.astro"
+import Experience from "@/components/Experience.astro"
+import Hero from "@/components/Hero.astro"
+import Skills from "@/components/Skills.astro"
+
 import Layout from "@/layouts/Layout.astro"
 ---
 
-<Layout title="Farias Lautaro" description="Yet another backend developer." />
+<Layout title="Farias Lautaro" description="Yet another backend developer.">
+  <main>
+    <Hero />
+    <Experience />
+    <Skills />
+    <About />
+  </main>
+</Layout>
