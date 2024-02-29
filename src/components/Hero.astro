@@ -1,4 +1,5 @@
 ---
+import Badge from "@/components/ui/Badge.astro"
 import Button from "@/components/ui/Button.astro"
 
 import GemIcon from "@/components/icons/Gem.astro"
@@ -8,24 +9,32 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import ReaderIcon from "@/components/icons/Reader.astro"
 ---
 
-<div>
-  <header>
-    <h1>Farias Lautaro</h1>
-    <h2>Backend Developer con +3 años de experiencia.</h2>
-  </header>
+<div class="flex w-full flex-row justify-around">
+  <div class="flex w-fit flex-col justify-between">
+    <div>
+      <header>
+        <h1 class="text-3xl font-medium">Farias Lautaro</h1>
+        <h2 class="text-md">Backend Developer con +3 años de experiencia.</h2>
+      </header>
 
-  <section>
-    <span><GlobeIcon /></span>Buenos Aires, Argentina.
-    <span><GemIcon />21 años.</span>
-  </section>
+      <section class="flex flex-row gap-2">
+        <Badge><GlobeIcon />Buenos Aires, Argentina</Badge>
+        <Badge><GemIcon />21 años</Badge>
+      </section>
+    </div>
 
-  <section>
-    <Button><GitHubIcon /></Button>
-    <Button><LinkedInIcon /></Button>
-    <Button><ReaderIcon /><span>Descargar CV</span></Button>
-  </section>
+    <section class="flex flex-row gap-2">
+      <Button><GitHubIcon /></Button>
+      <Button><LinkedInIcon /></Button>
+      <Button><ReaderIcon /><span>Descargar CV</span></Button>
+    </section>
+  </div>
 
-  <aside>
-    <img src="/src/images/Person.svg" alt="Farias Lautaro" />
+  <aside class="size-md flex">
+    <img
+      class="aspect-square w-full max-w-40"
+      src="/src/images/Person.svg"
+      alt="Farias Lautaro"
+    />
   </aside>
 </div>
