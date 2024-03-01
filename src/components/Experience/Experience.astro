@@ -1,0 +1,72 @@
+---
+import ExperienceGroup from "./_ExperienceGroup.astro"
+import ExperienceItem from "./_ExperienceItem.astro"
+import ExperienceSeparator from "./_ExperienceSeparator.astro"
+
+const experience = [
+  {
+    company: "SimpliMuv",
+    yearRange: "2020 - Actualidad",
+    positions: [
+      {
+        name: "Desarrollador Backend",
+        description: `
+          Desarrollo, mantenimiento e implementación de un SaaS e-commerce 
+          en Django. Con gran participación en administración y dirección 
+          del equipo y aportes en frontend utilizando Nuxt 2 e 
+          infraestructura con AWS.
+        `,
+        dateRange: "08/2020 - 06/2022",
+      },
+      {
+        name: "Referente técnico",
+        description: `
+          Desarrollo de la versión 2 de SimpliMuv, implementada en +10 clientes. 
+          Contribuí a la organización y planificación del equipo, 
+          asegurándome que mis compañeros pudieran resolver los requerimientos, 
+          dando el soporte necesario.
+        `,
+        dateRange: "06/2022 - 01/2024",
+      },
+      {
+        name: "Líder técnico",
+        description: `
+          Desarrollo de la versión 3 de SimpliMuv, orientada a micro servicios en FastAPI 
+          y soporte de la versión 2. Me desempeñe en la definición de requerimientos técnicos,
+          modelado, estructura de los proyectos y asegurando la calidad del código.
+          También organice reuniones retroactivas con los miembros del equipo de 
+          forma individual para garantizar la conformidad y el progreso laboral.
+        `,
+        dateRange: "01/2024 - Actualidad",
+      },
+    ],
+  },
+]
+---
+
+<section class="flex flex-col gap-4">
+  <header>
+    <h2 class="text-2xl">Experience</h2>
+  </header>
+  <section class="flex flex-col items-start">
+    {
+      experience.map(({ company, yearRange, positions }, index) => (
+        <>
+          <ExperienceGroup company={company} yearRange={yearRange}>
+            {positions.map(({ name, description, dateRange }) => (
+              <>
+                <ExperienceSeparator class="h-2" />
+                <ExperienceItem
+                  position={name}
+                  description={description}
+                  dateRange={dateRange}
+                />
+              </>
+            ))}
+          </ExperienceGroup>
+          {index > 0 && <ExperienceSeparator />}
+        </>
+      ))
+    }
+  </section>
+</section>

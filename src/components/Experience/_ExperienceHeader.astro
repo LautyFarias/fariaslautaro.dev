@@ -1,0 +1,14 @@
+---
+interface Props {
+  dateRange: string
+}
+
+const { dateRange } = Astro.props
+---
+
+<header class="flex w-full flex-row justify-between">
+  <div class="flex items-center">
+    <slot />
+  </div>
+  <span class="text-xs text-slate-400">{dateRange}</span>
+</header>
