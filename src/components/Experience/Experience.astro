@@ -50,19 +50,16 @@ const experience = [
   {
     experience.map(({ company, yearRange, positions }, index) => (
       <>
+        {index > 0 && <ExperienceSeparator class="h-10" />}
         <ExperienceGroup company={company} yearRange={yearRange}>
           {positions.map(({ name, description, dateRange }) => (
-            <>
-              <ExperienceSeparator class="h-2" />
-              <ExperienceItem
-                position={name}
-                description={description}
-                dateRange={dateRange}
-              />
-            </>
+            <ExperienceItem
+              position={name}
+              description={description}
+              dateRange={dateRange}
+            />
           ))}
         </ExperienceGroup>
-        {index > 0 && <ExperienceSeparator />}
       </>
     ))
   }

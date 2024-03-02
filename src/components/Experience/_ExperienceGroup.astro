@@ -1,6 +1,7 @@
 ---
 import DotFilled from "@/components/icons/DotFilled.astro"
 import ExperienceHeader from "./_ExperienceHeader.astro"
+import ExperienceSeparator from "./_ExperienceSeparator.astro"
 
 interface Props {
   company: string
@@ -10,13 +11,14 @@ interface Props {
 const { company, yearRange } = Astro.props
 ---
 
-<div class="flex w-full flex-col items-start">
+<div>
   <ExperienceHeader dateRange={yearRange}>
     <DotFilled /><h3 class="text-xl font-medium">
       {company}
     </h3>
   </ExperienceHeader>
   <section class="flex flex-col">
+    <ExperienceSeparator class="h-2" />
     <slot />
   </section>
 </div>
