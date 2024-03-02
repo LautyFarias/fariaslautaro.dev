@@ -1,4 +1,6 @@
 ---
+import Section from "@/components/ui/Section.astro"
+
 import ExperienceGroup from "./_ExperienceGroup.astro"
 import ExperienceItem from "./_ExperienceItem.astro"
 import ExperienceSeparator from "./_ExperienceSeparator.astro"
@@ -44,29 +46,24 @@ const experience = [
 ]
 ---
 
-<section class="flex flex-col gap-4">
-  <header>
-    <h2 class="text-2xl">Experience</h2>
-  </header>
-  <section class="flex flex-col items-start">
-    {
-      experience.map(({ company, yearRange, positions }, index) => (
-        <>
-          <ExperienceGroup company={company} yearRange={yearRange}>
-            {positions.map(({ name, description, dateRange }) => (
-              <>
-                <ExperienceSeparator class="h-2" />
-                <ExperienceItem
-                  position={name}
-                  description={description}
-                  dateRange={dateRange}
-                />
-              </>
-            ))}
-          </ExperienceGroup>
-          {index > 0 && <ExperienceSeparator />}
-        </>
-      ))
-    }
-  </section>
-</section>
+<Section title="Experiencia">
+  {
+    experience.map(({ company, yearRange, positions }, index) => (
+      <>
+        <ExperienceGroup company={company} yearRange={yearRange}>
+          {positions.map(({ name, description, dateRange }) => (
+            <>
+              <ExperienceSeparator class="h-2" />
+              <ExperienceItem
+                position={name}
+                description={description}
+                dateRange={dateRange}
+              />
+            </>
+          ))}
+        </ExperienceGroup>
+        {index > 0 && <ExperienceSeparator />}
+      </>
+    ))
+  }
+</Section>
