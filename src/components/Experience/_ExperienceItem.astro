@@ -1,5 +1,6 @@
 ---
 import Dot from "@/components/icons/Dot.astro"
+import ExperienceDescription from "@/components/ui/ExperienceDescription.astro"
 import ExperienceHeader from "@/components/ui/ExperienceHeader.astro"
 import ExperienceSeparator from "./_ExperienceSeparator.astro"
 
@@ -18,8 +19,6 @@ const { position, description, dateRange } = Astro.props
   </ExperienceHeader>
   <section class="flex flex-row gap-2">
     <ExperienceSeparator class="h-auto" />
-    <p class="py-2 text-sm text-slate-500">
-      {description}
-    </p>
+    <ExperienceDescription>{description}</ExperienceDescription>
   </section>
 </div>
