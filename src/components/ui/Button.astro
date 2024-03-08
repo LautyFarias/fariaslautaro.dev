@@ -1,4 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+type Props = HTMLAttributes<"button">
+
+const { ...attrs } = Astro.props
+---
+
 <button
+  {...attrs}
   class="flex w-fit flex-row items-center gap-1 rounded-md bg-blue-700 p-2 leading-3 text-white"
 >
   <slot />
