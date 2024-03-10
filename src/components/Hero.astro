@@ -6,6 +6,8 @@ import GlobeIcon from "@/components/icons/Globe.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import PhoneFill from "@/components/icons/PhoneFill.astro"
 import ReaderIcon from "@/components/icons/Reader.astro"
+import { NotPrintable, Printable } from "@/components/print"
+import { Text, TextVariant } from "@/components/text"
 import Badge from "@/components/ui/Badge.astro"
 import Button from "@/components/ui/Button.astro"
 
@@ -35,33 +37,41 @@ const gitHub = "https://github.com/LautyFarias",
       </section>
     </div>
 
-    <section class="flex flex-row gap-2">
-      <Button aria-label="Correo">
-        <a aria-label="Contáctame!" href=`mailto:${email}`>
-          <EnvelopeClosed />
-        </a>
-      </Button>
-      <Button aria-label="Teléfono">
-        <a aria-label="Llámame!" href=`tel:${cellphone}`>
-          <PhoneFill />
-        </a>
-      </Button>
-      <Button aria-label="GitHub">
-        <a aria-label="Ve mi perfil de GitHub" href={gitHub} target="_blank">
-          <GitHubIcon />
-        </a>
-      </Button>
-      <Button aria-label="LinkedIn">
-        <a
-          aria-label="Ve mi perfil de LinkedIn"
-          href={linkedIn}
-          target="_blank"
-        >
-          <LinkedInIcon />
-        </a>
-      </Button>
-      <Button class="print"><ReaderIcon /><span>Descargar CV</span></Button>
-    </section>
+    <NotPrintable>
+      <section class="flex flex-row gap-2">
+        <Button aria-label="Correo">
+          <a aria-label="Contáctame!" href=`mailto:${email}`>
+            <EnvelopeClosed />
+          </a>
+        </Button>
+        <Button aria-label="Teléfono">
+          <a aria-label="Llámame!" href=`tel:${cellphone}`>
+            <PhoneFill />
+          </a>
+        </Button>
+        <Button aria-label="GitHub">
+          <a aria-label="Ve mi perfil de GitHub" href={gitHub} target="_blank">
+            <GitHubIcon />
+          </a>
+        </Button>
+        <Button aria-label="LinkedIn">
+          <a
+            aria-label="Ve mi perfil de LinkedIn"
+            href={linkedIn}
+            target="_blank"
+          >
+            <LinkedInIcon />
+          </a>
+        </Button>
+        <Button class="print"><ReaderIcon /><span>Descargar CV</span></Button>
+      </section>
+    </NotPrintable>
+    <Printable>
+      <section class="flex flex-col gap-2">
+        <Text variant={TextVariant.Secondary}>{email}</Text>
+        <Text variant={TextVariant.Secondary}>{cellphone}</Text>
+      </section>
+    </Printable>
   </article>
 
   <aside class="size-md flex">
