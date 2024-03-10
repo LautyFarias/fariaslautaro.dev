@@ -1,3 +1,19 @@
-<div class="hidden print:block">
+---
+import type { HTMLAttributes } from "astro/types"
+
+type Props = HTMLAttributes<"div">
+
+const attrs = Astro.props,
+  className = attrs.class || "",
+  displayFlex = "flex"
+
+let printStyle = "print:block"
+
+if (className.includes(displayFlex)) {
+  printStyle = `print:${displayFlex}`
+}
+---
+
+<div class="hidden" class:list={[className, printStyle]} {...attrs}>
   <slot />
 </div>
