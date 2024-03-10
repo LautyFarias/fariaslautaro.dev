@@ -41,7 +41,7 @@ const gitHub = "https://github.com/LautyFarias",
           <LinkedInIcon />
         </a>
       </Button>
-      <Button><ReaderIcon /><span>Descargar CV</span></Button>
+      <Button class="print"><ReaderIcon /><span>Descargar CV</span></Button>
     </section>
   </article>
 
@@ -53,3 +53,8 @@ const gitHub = "https://github.com/LautyFarias",
     />
   </aside>
 </section>
+<script>
+  const button = document.querySelector(".print")
+
+  button?.addEventListener("click", () => print())
+</script>
