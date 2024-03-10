@@ -1,5 +1,20 @@
-<span
-  class="flex w-fit flex-row justify-around gap-1 rounded-lg bg-slate-200 px-2 py-1 text-xs text-slate-600"
->
-  <slot />
-</span>
+---
+import { NotPrintable, Printable } from "@/components/print"
+
+const bullet = "•"
+---
+
+<NotPrintable>
+  <span
+    class="flex w-fit flex-row justify-around gap-1 rounded-lg bg-slate-200 px-2 py-1 text-xs text-slate-600"
+  >
+    <slot name="icon" />
+    <slot />
+  </span>
+</NotPrintable>
+<Printable>
+  <span class="flex gap-1 text-xs text-slate-600">
+    {bullet}
+    <slot />
+  </span>
+</Printable>
