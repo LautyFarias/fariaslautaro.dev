@@ -1,0 +1,39 @@
+---
+import GemIcon from "@/components/icons/Gem.astro"
+import GlobeIcon from "@/components/icons/Globe.astro"
+import Badge from "@/components/ui/Badge.astro"
+
+import HeroFooter from "./_HeroFooter.astro"
+---
+
+<section class="flex w-full flex-row justify-between">
+  <article class="flex w-fit flex-col justify-between">
+    <div>
+      <header>
+        <h1 class="text-3xl font-medium">Farias Lautaro</h1>
+        <h2 class="text-md">Backend Developer con +3 años de experiencia.</h2>
+      </header>
+
+      <section class="flex flex-row gap-2">
+        <Badge>
+          <GlobeIcon slot="icon" />
+          <span>Buenos Aires, Argentina</span>
+        </Badge>
+        <Badge>
+          <GemIcon slot="icon" />
+          <span>21 años</span>
+        </Badge>
+      </section>
+    </div>
+
+    <HeroFooter />
+  </article>
+
+  <aside class="size-md flex">
+    <img
+      class="aspect-square w-full max-w-40"
+      src="/src/images/Person.svg"
+      alt="Farias Lautaro"
+    />
+  </aside>
+</section>
