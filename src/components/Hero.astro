@@ -1,15 +1,18 @@
 ---
-import Badge from "@/components/ui/Badge.astro"
-import Button from "@/components/ui/Button.astro"
-
+import EnvelopeClosed from "@/components/icons/EnvelopeClosed.astro"
 import GemIcon from "@/components/icons/Gem.astro"
 import GitHubIcon from "@/components/icons/GitHub.astro"
 import GlobeIcon from "@/components/icons/Globe.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import PhoneFill from "@/components/icons/PhoneFill.astro"
 import ReaderIcon from "@/components/icons/Reader.astro"
+import Badge from "@/components/ui/Badge.astro"
+import Button from "@/components/ui/Button.astro"
 
 const gitHub = "https://github.com/LautyFarias",
-  linkedIn = "https://www.linkedin.com/in/lautaro-farias"
+  linkedIn = "https://www.linkedin.com/in/lautaro-farias",
+  email = "farias.lautaro002@gmail.com",
+  cellphone = "+541157638664"
 ---
 
 <section class="flex w-full flex-row justify-between">
@@ -33,6 +36,16 @@ const gitHub = "https://github.com/LautyFarias",
     </div>
 
     <section class="flex flex-row gap-2">
+      <Button aria-label="Correo">
+        <a aria-label="Contáctame!" href=`mailto:${email}`>
+          <EnvelopeClosed />
+        </a>
+      </Button>
+      <Button aria-label="Teléfono">
+        <a aria-label="Llámame!" href=`tel:${cellphone}`>
+          <PhoneFill />
+        </a>
+      </Button>
       <Button aria-label="GitHub">
         <a aria-label="Ve mi perfil de GitHub" href={gitHub} target="_blank">
           <GitHubIcon />
