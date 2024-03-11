@@ -1,5 +1,6 @@
 ---
 import DotFilled from "@/components/icons/DotFilled.astro"
+import { NotPrintable } from "@/components/print"
 import ExperienceHeader from "@/components/ui/ExperienceHeader.astro"
 import ExperienceSeparator from "./_ExperienceSeparator.astro"
 
@@ -13,7 +14,8 @@ const { company, yearRange } = Astro.props
 
 <div>
   <ExperienceHeader dateRange={yearRange}>
-    <DotFilled /><h3 class="text-xl font-medium">
+    <NotPrintable><DotFilled /></NotPrintable>
+    <h3 class="text-xl font-medium">
       {company}
     </h3>
   </ExperienceHeader>
