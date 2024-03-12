@@ -3,7 +3,7 @@ import Backpack from "@/components/icons/Backpack.astro"
 import Home from "@/components/icons/Home.astro"
 import Badge from "@/components/ui/Badge.astro"
 import Section from "@/components/ui/Section.astro"
-import ExperienceDescription from "./ui/ExperienceDescription.astro"
+import { Paragraph, TextVariant } from "@/components/ui/text"
 
 const KnowledgeIcon = Object.freeze({
   work: Backpack,
@@ -23,17 +23,17 @@ const skills = [
 
 <Section title="Skills">
   <div class="flex flex-col gap-2">
-    <div class="flex gap-6">
-      <ExperienceDescription>
+    <div class="flex gap-6 py-2">
+      <Paragraph variant={TextVariant.Secondary}>
         <span class="flex gap-2">
           <KnowledgeIcon.work />Experiencia de trabajo
         </span>
-      </ExperienceDescription>
-      <ExperienceDescription>
+      </Paragraph>
+      <Paragraph variant={TextVariant.Secondary}>
         <span class="flex gap-2">
           <KnowledgeIcon.selfTaught />Experiencia Autodidacta
         </span>
-      </ExperienceDescription>
+      </Paragraph>
     </div>
     <div class="flex gap-2">
       {

@@ -1,7 +1,7 @@
 ---
-import ExperienceDescription from "@/components/ui/ExperienceDescription.astro"
 import ExperienceHeader from "@/components/ui/ExperienceHeader.astro"
 import Section from "@/components/ui/Section.astro"
+import { Paragraph, TextVariant } from "@/components/ui/text"
 ---
 
 <Section title="Educación">
@@ -9,8 +9,8 @@ import Section from "@/components/ui/Section.astro"
     <h3>E.E.S.T N°7 José Hernández</h3>
   </ExperienceHeader>
   <section>
-    <ExperienceDescription>
+    <Paragraph variant={TextVariant.Secondary}>
       Tecnicatura secundaria con especialización en programación.
-    </ExperienceDescription>
+    </Paragraph>
   </section>
 </Section>
