@@ -8,7 +8,7 @@ const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class="font-mono">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -16,6 +16,15 @@ const { title, description } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <style>
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400;
+        src: url("/fonts/nunito-latin-400-normal.woff2");
+      }
+    </style>
   </head>
   <body>
     <slot />
