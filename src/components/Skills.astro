@@ -1,6 +1,7 @@
 ---
 import Backpack from "@/components/icons/Backpack.astro"
 import Home from "@/components/icons/Home.astro"
+import { NotPrintable } from "@/components/print"
 import Badge from "@/components/ui/Badge.astro"
 import Section from "@/components/ui/Section.astro"
 import { Paragraph, TextVariant } from "@/components/ui/text"
@@ -15,34 +16,31 @@ const skills = [
   { name: "Django", icon: KnowledgeIcon.work },
   { name: "FastAPI", icon: KnowledgeIcon.work },
   { name: "JavaScript", icon: KnowledgeIcon.work },
-  { name: "Vue 2", icon: KnowledgeIcon.work },
   { name: "React", icon: KnowledgeIcon.selfTaught },
   { name: "Astro", icon: KnowledgeIcon.selfTaught },
 ]
 ---
 
-<Section title="Skills">
-  <div class="flex flex-col gap-2">
-    <div class="flex gap-6 py-2">
-      <Paragraph variant={TextVariant.Secondary}>
-        <span class="flex gap-2">
-          <KnowledgeIcon.work />Experiencia de trabajo
-        </span>
-      </Paragraph>
-      <Paragraph variant={TextVariant.Secondary}>
-        <span class="flex gap-2">
-          <KnowledgeIcon.selfTaught />Experiencia Autodidacta
-        </span>
-      </Paragraph>
-    </div>
-    <div class="flex gap-2">
-      {
-        skills.map((skill) => (
-          <Badge>
-            <skill.icon /> {skill.name}
-          </Badge>
-        ))
-      }
-    </div>
+<Section title="Skills" class="flex flex-col gap-2">
+  <NotPrintable class="flex gap-6 py-2">
+    <Paragraph variant={TextVariant.Secondary}>
+      <span class="flex gap-2">
+        <KnowledgeIcon.work />Experiencia de trabajo
+      </span>
+    </Paragraph>
+    <Paragraph variant={TextVariant.Secondary}>
+      <span class="flex gap-2">
+        <KnowledgeIcon.selfTaught />Experiencia Autodidacta
+      </span>
+    </Paragraph>
+  </NotPrintable>
+  <div class="flex flex-wrap gap-2">
+    {
+      skills.map((skill) => (
+        <Badge>
+          <skill.icon slot="icon" /> {skill.name}
+        </Badge>
+      ))
+    }
   </div>
 </Section>
