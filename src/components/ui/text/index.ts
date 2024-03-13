@@ -5,5 +5,5 @@ export { Paragraph, Text }
 
 export enum TextVariant {
   Primary = "primary",
-  Secondary = "secondary"
+  Secondary = "secondary",
 }
