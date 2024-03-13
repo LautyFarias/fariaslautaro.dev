@@ -5,17 +5,25 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import PhoneFill from "@/components/icons/PhoneFill.astro"
 import ReaderIcon from "@/components/icons/Reader.astro"
 import { NotPrintable, Printable } from "@/components/print"
-import { Text, TextVariant } from "@/components/ui/text"
 import Button from "@/components/ui/actions/Button.astro"
+import { Text, TextVariant } from "@/components/ui/text"
+
+interface Props {
+  class?: string
+}
 
 const gitHub = "https://github.com/LautyFarias",
   linkedIn = "https://www.linkedin.com/in/lautaro-farias",
   email = "farias.lautaro002@gmail.com",
   cellphone = "+541157638664"
+
+const { class: className } = Astro.props
 ---
 
-<footer>
-  <NotPrintable class="flex flex-row gap-2">
+<footer class="container" class:list={className}>
+  <NotPrintable
+    class="flex w-full flex-row justify-between gap-2 sm:justify-start"
+  >
     <Button aria-label="Correo">
       <a aria-label="Contáctame!" href=`mailto:${email}`>
         <EnvelopeClosed />

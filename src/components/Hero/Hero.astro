@@ -6,15 +6,15 @@ import Badge from "@/components/ui/Badge.astro"
 import HeroFooter from "./_HeroFooter.astro"
 ---
 
-<section class="flex w-full flex-row justify-between">
-  <article class="flex w-fit flex-col justify-between">
+<section class="grid w-full grid-flow-row grid-cols-3 gap-6">
+  <article class="col-span-2 flex w-fit flex-col justify-between">
     <div>
       <header>
         <h1 class="text-3xl font-bold">Farias Lautaro</h1>
         <h2 class="text-md">Backend Developer con +3 años de experiencia.</h2>
       </header>
 
-      <section class="flex flex-row gap-2">
+      <section class="hidden flex-row gap-2 sm:flex">
         <Badge>
           <GlobeIcon slot="icon" />
           <span>Buenos Aires, Argentina</span>
@@ -25,15 +25,15 @@ import HeroFooter from "./_HeroFooter.astro"
         </Badge>
       </section>
     </div>
-
-    <HeroFooter />
   </article>
 
-  <aside class="size-md flex">
+  <figure class="row-span-2 flex justify-end">
     <img
-      class="aspect-square w-full max-w-40"
+      class="aspect-square w-full max-w-32 md:max-w-40"
       src="/src/images/Person.svg"
       alt="Farias Lautaro"
     />
-  </aside>
+  </figure>
+
+  <HeroFooter class="col-span-3 flex items-end sm:col-span-2" />
 </section>
