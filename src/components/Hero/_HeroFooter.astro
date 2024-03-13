@@ -22,28 +22,34 @@ const { class: className } = Astro.props
 
 <footer class="container" class:list={className}>
   <NotPrintable
-    class="flex w-full flex-row justify-between gap-2 sm:justify-start"
+    class="flex w-full flex-row justify-between gap-1 sm:justify-start"
   >
-    <Button aria-label="Correo">
-      <a aria-label="Contáctame!" href=`mailto:${email}`>
-        <EnvelopeClosed />
-      </a>
-    </Button>
-    <Button aria-label="Teléfono">
-      <a aria-label="Llámame!" href=`tel:${cellphone}`>
-        <PhoneFill />
-      </a>
-    </Button>
-    <Button aria-label="GitHub">
-      <a aria-label="Ve mi perfil de GitHub" href={gitHub} target="_blank">
-        <GitHubIcon />
-      </a>
-    </Button>
-    <Button aria-label="LinkedIn">
-      <a aria-label="Ve mi perfil de LinkedIn" href={linkedIn} target="_blank">
-        <LinkedInIcon />
-      </a>
-    </Button>
+    <div class="flex gap-1">
+      <Button aria-label="Correo">
+        <a aria-label="Contáctame!" href=`mailto:${email}`>
+          <EnvelopeClosed />
+        </a>
+      </Button>
+      <Button aria-label="Teléfono">
+        <a aria-label="Llámame!" href=`tel:${cellphone}`>
+          <PhoneFill />
+        </a>
+      </Button>
+      <Button aria-label="GitHub">
+        <a aria-label="Ve mi perfil de GitHub" href={gitHub} target="_blank">
+          <GitHubIcon />
+        </a>
+      </Button>
+      <Button aria-label="LinkedIn">
+        <a
+          aria-label="Ve mi perfil de LinkedIn"
+          href={linkedIn}
+          target="_blank"
+        >
+          <LinkedInIcon />
+        </a>
+      </Button>
+    </div>
     <Button class="print"><ReaderIcon /><span>Descargar CV</span></Button>
   </NotPrintable>
   <Printable class="flex flex-col gap-2">
