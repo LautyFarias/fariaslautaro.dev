@@ -4,24 +4,34 @@ import GlobeIcon from "@/components/icons/Globe.astro"
 import Badge from "@/components/ui/Badge.astro"
 
 import HeroFooter from "./_HeroFooter.astro"
+
+interface Props {
+  fullName: string
+  shortDescription: string
+  location: string
+  age: string
+  imagePath: string
+}
+
+const { fullName, shortDescription, location, age, imagePath } = Astro.props
 ---
 
 <section class="grid w-full grid-flow-row grid-cols-3 gap-6">
   <article class="col-span-2 flex w-fit flex-col justify-between">
     <div>
       <header>
-        <h1 class="text-3xl font-bold">Farias Lautaro</h1>
-        <h2 class="text-md">Backend Developer con +3 años de experiencia.</h2>
+        <h1 class="text-3xl font-bold">{fullName}</h1>
+        <h2 class="text-md">{shortDescription}</h2>
       </header>
 
       <section class="hidden flex-row gap-2 sm:flex">
         <Badge>
           <GlobeIcon slot="icon" />
-          <span>Buenos Aires, Argentina</span>
+          <span>{location}</span>
         </Badge>
         <Badge>
           <GemIcon slot="icon" />
-          <span>21 años</span>
+          <span>{age}</span>
         </Badge>
       </section>
     </div>
@@ -30,7 +40,7 @@ import HeroFooter from "./_HeroFooter.astro"
   <figure class="row-span-2 flex justify-end">
     <img
       class="aspect-square w-full max-w-32 rounded-xl object-cover md:max-w-40"
-      src="/images/me.webp"
+      src={imagePath}
       alt="Farias Lautaro"
     />
   </figure>

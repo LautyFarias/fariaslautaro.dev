@@ -6,13 +6,27 @@ import Hero from "@/components/Hero"
 import Skills from "@/components/Skills.astro"
 
 import Layout from "@/layouts/Layout.astro"
+import { calculateAgeFromBirthdate } from "@/utils"
+
+import cv from "@cv"
+
+const { fullName, shortDescription, location, birthdate, imagePath } = cv
+
+const age = calculateAgeFromBirthdate(birthdate)
+const ageText = `${age} años`
 ---
 
 <Layout title="Farias Lautaro" description="Yet another backend developer.">
   <main
     class="container mx-auto flex max-w-4xl flex-col gap-16 px-8 py-16 print:gap-4 print:p-6"
   >
-    <Hero />
+    <Hero
+      fullName={fullName}
+      shortDescription={shortDescription}
+      location={location}
+      age={ageText}
+      imagePath={imagePath}
+    />
     <About />
     <Experience />
     <Education />
