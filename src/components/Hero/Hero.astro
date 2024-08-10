@@ -16,25 +16,23 @@ interface Props {
 const { fullName, shortDescription, location, age, imagePath } = Astro.props
 ---
 
-<section class="grid w-full grid-flow-row grid-cols-3 gap-6">
+<section class="grid w-full grid-flow-row grid-cols-3 gap-4">
   <article class="col-span-2 flex w-fit flex-col justify-between">
-    <div>
-      <header>
-        <h1 class="text-3xl font-bold">{fullName}</h1>
-        <h2 class="text-md">{shortDescription}</h2>
-      </header>
+    <header>
+      <h1 class="text-2xl font-bold sm:text-3xl">{fullName}</h1>
+      <h2 class="sm:text-md text-sm">{shortDescription}</h2>
+    </header>
 
-      <section class="hidden flex-row gap-2 sm:flex">
-        <Badge>
-          <GlobeIcon slot="icon" />
-          <span>{location}</span>
-        </Badge>
-        <Badge>
-          <GemIcon slot="icon" />
-          <span>{age}</span>
-        </Badge>
-      </section>
-    </div>
+    <section class="hidden flex-row gap-2 sm:flex">
+      <Badge>
+        <GlobeIcon slot="icon" />
+        <span>{location}</span>
+      </Badge>
+      <Badge>
+        <GemIcon slot="icon" />
+        <span>{age}</span>
+      </Badge>
+    </section>
   </article>
 
   <figure class="row-span-2 flex justify-end">
