@@ -19,8 +19,8 @@ const { company, yearRange } = Astro.props
       {company}
     </h3>
   </ExperienceHeader>
-  <section class="flex flex-col">
-    <ExperienceSeparator class="h-2" />
+  <section class="flex flex-col-reverse">
     <slot />
+    <ExperienceSeparator class="h-2" />
   </section>
 </div>
