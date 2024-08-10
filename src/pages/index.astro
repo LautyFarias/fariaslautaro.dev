@@ -10,7 +10,14 @@ import { calculateAgeFromBirthdate } from "@/utils"
 
 import cv from "@cv"
 
-const { fullName, shortDescription, location, birthdate, imagePath } = cv
+const {
+  fullName,
+  shortDescription,
+  location,
+  birthdate,
+  imagePath,
+  experience,
+} = cv
 
 const age = calculateAgeFromBirthdate(birthdate)
 const ageText = `${age} años`
@@ -28,7 +35,7 @@ const ageText = `${age} años`
       imagePath={imagePath}
     />
     <About />
-    <Experience />
+    <Experience experience={experience} />
     <Education />
     <Skills />
   </main>
