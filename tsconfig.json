@@ -4,12 +4,8 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@cv": [
-        "./cv.json"
-      ]
+      "@/*": ["./src/*"],
+      "@cv": ["./cv.json"]
     }
   }
 }
