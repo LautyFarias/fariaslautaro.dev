@@ -8,19 +8,29 @@ import Skills from "@/components/Skills.astro"
 import Layout from "@/layouts/Layout.astro"
 import { calculateAgeFromBirthdate } from "@/utils"
 
-import cv from "@cv"
+import resume from "@resume"
 
 const {
-  fullName,
-  shortDescription,
-  location,
-  birthdate,
-  imagePath,
-  experience,
-} = cv
+  basics: { name, summary, birthdate, location: { region, countryCode }, image }, work
+} = resume
+
 
 const age = calculateAgeFromBirthdate(birthdate)
+
 const ageText = `${age} años`
+const locationText = `${region}, ${countryCode}`
+
+const positions = work.map(workItem => ({
+  name: workItem.position,
+  description: workItem.description,
+  dateRange: `${workItem.startDate} - ${workItem.endDate ?? "Actualidad"}`
+}))
+
+const experience = {
+  company: "SimpliMuv",
+  yearRange: "2020 - Actualidad",
+  positions
+}
 ---
 
 <Layout title="Farias Lautaro" description="Yet another backend developer.">
@@ -28,14 +38,14 @@ const ageText = `${age} años`
     class="container mx-auto flex max-w-4xl flex-col gap-16 px-8 py-16 print:gap-4 print:p-6"
   >
     <Hero
-      fullName={fullName}
-      shortDescription={shortDescription}
-      location={location}
+      fullName={name}
+      shortDescription={summary}
+      location={locationText}
       age={ageText}
-      imagePath={imagePath}
+      imagePath={image}
     />
     <About />
-    <Experience experience={experience} />
+    <Experience experience={[experience]} />
     <Education />
     <Skills />
   </main>
