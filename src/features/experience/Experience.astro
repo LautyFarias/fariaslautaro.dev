@@ -1,25 +1,13 @@
 ---
 import Section from "@/components/ui/Section.astro"
-
 import {
   Separator,
   WorkGroup,
   WorkPosition,
 } from "@/features/experience/components"
+import type { Experience } from "@/features/experience/types"
 
-interface Position {
-  name: string
-  description: string
-  dateRange: string
-}
-
-interface Experience {
-  company: string
-  yearRange: string
-  positions: Position[]
-}
-
-interface Props {
+export interface Props {
   experience: Experience[]
 }
 

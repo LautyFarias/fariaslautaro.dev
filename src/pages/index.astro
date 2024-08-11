@@ -4,6 +4,7 @@ import Education from "@/components/Education.astro"
 import Hero from "@/components/Hero"
 import Skills from "@/components/Skills.astro"
 import { Experience } from "@/features"
+import { serializeExperience } from "@/features/experience/serializer"
 
 import Layout from "@/layouts/Layout.astro"
 import { calculateAgeFromBirthdate } from "@/utils"
@@ -25,18 +26,6 @@ const age = calculateAgeFromBirthdate(birthdate)
 
 const ageText = `${age} años`
 const locationText = `${region}, ${countryCode}`
-
-const positions = work.map((workItem) => ({
-  name: workItem.position,
-  description: workItem.description,
-  dateRange: `${workItem.startDate} - ${workItem.endDate ?? "Actualidad"}`,
-}))
-
-const experience = {
-  company: "SimpliMuv",
-  yearRange: "2020 - Actualidad",
-  positions,
-}
 ---
 
 <Layout title="Farias Lautaro" description="Yet another backend developer.">
@@ -51,7 +40,7 @@ const experience = {
       imagePath={image}
     />
     <About />
-    <Experience experience={[experience]} />
+    <Experience {...serializeExperience(work)} />
     <Education />
     <Skills />
   </main>
