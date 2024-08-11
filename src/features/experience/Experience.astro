@@ -2,9 +2,9 @@
 import Section from "@/components/ui/Section.astro"
 
 import {
-  ExperienceGroup,
-  ExperienceItem,
-  ExperienceSeparator,
+  Separator,
+  WorkGroup,
+  WorkPosition,
 } from "@/features/experience/components"
 
 interface Position {
@@ -30,16 +30,16 @@ const { experience } = Astro.props
   {
     experience.map(({ company, yearRange, positions }, index) => (
       <>
-        {index > 0 && <ExperienceSeparator class="h-10" />}
-        <ExperienceGroup company={company} yearRange={yearRange}>
+        {index > 0 && <Separator class="h-10" />}
+        <WorkGroup company={company} yearRange={yearRange}>
           {positions.map(({ name, description, dateRange }) => (
-            <ExperienceItem
+            <WorkPosition
               position={name}
               description={description}
               dateRange={dateRange}
             />
           ))}
-        </ExperienceGroup>
+        </WorkGroup>
       </>
     ))
   }

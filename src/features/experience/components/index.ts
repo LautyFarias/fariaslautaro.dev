@@ -1,5 +1,6 @@
-import ExperienceGroup from "@/features/experience/components/_ExperienceGroup.astro"
-import ExperienceItem from "@/features/experience/components/_ExperienceItem.astro"
-import ExperienceSeparator from "@/features/experience/components/_ExperienceSeparator.astro"
+import Separator from "@/features/experience/components/Separator.astro"
+import WorkGroup from "@/features/experience/components/WorkGroup.astro"
+import WorkPosition from "@/features/experience/components/WorkPosition.astro"
 
-export { ExperienceGroup, ExperienceItem, ExperienceSeparator }
+export { Separator, WorkGroup, WorkPosition }
+
