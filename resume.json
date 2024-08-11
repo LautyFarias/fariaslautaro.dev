@@ -53,17 +53,8 @@
         "Lead submission (HubSpot integration)",
         "Many payment gateways (Mercado Pago, Stripe, Payway)"
       ],
-      "keywords": [
-        "Python",
-        "Django",
-        "Celery",
-        "Nuxt 2",
-        "PostgresSQL"
-      ],
-      "roles": [
-        "Desarrollador Fullstack",
-        "Líder técnico"
-      ],
+      "keywords": ["Python", "Django", "Celery", "Nuxt 2", "PostgresSQL"],
+      "roles": ["Desarrollador Fullstack", "Líder técnico"],
       "name": "SimpliMuv SaaS",
       "description": "Una plataforma ecommerce para la industria de la movilidad de 2 ruedas con varias integraciones como analytics, envío de leads y plataformas de pago. Incluye un administrador para manejar el inventario de motos, accesorios y merchandising.",
       "type": "aplicación web",
@@ -115,53 +106,37 @@
   ],
   "skills": [
     {
-      "keywords": [
-        "Work experience"
-      ],
+      "keywords": ["Work experience"],
       "level": "Senior",
       "name": "Python"
     },
     {
-      "keywords": [
-        "Work experience",
-        "Python"
-      ],
+      "keywords": ["Work experience", "Python"],
       "level": "Senior",
       "name": "Django"
     },
     {
-      "keywords": [
-        "Work experience",
-        "Python"
-      ],
+      "keywords": ["Work experience", "Python"],
       "level": "Senior",
       "name": "FastAPI"
     },
     {
-      "keywords": [
-        "Work experience"
-      ],
+      "keywords": ["Work experience"],
       "level": "Senior",
       "name": "JavaScript"
     },
     {
-      "keywords": [
-        "Self-taught experience"
-      ],
+      "keywords": ["Self-taught experience"],
       "level": "-",
       "name": "NodeJS"
     },
     {
-      "keywords": [
-        "Self-taught experience"
-      ],
+      "keywords": ["Self-taught experience"],
       "level": "-",
       "name": "React"
     },
     {
-      "keywords": [
-        "Self-taught experience"
-      ],
+      "keywords": ["Self-taught experience"],
       "level": "-",
       "name": "Tailwind CSS"
     }
