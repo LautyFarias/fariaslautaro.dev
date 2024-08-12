@@ -5,6 +5,7 @@ import Hero from "@/components/Hero"
 import Skills from "@/components/Skills.astro"
 import { Experience } from "@/features"
 import { serializeExperience } from "@/features/experience/serializer"
+import { parseResume } from "@/features/resume-schema"
 
 import Layout from "@/layouts/Layout.astro"
 import { calculateAgeFromBirthdate } from "@/utils"
@@ -20,7 +21,7 @@ const {
     image,
   },
   work,
-} = resume
+} = parseResume(resume)
 
 const age = calculateAgeFromBirthdate(birthdate)
 

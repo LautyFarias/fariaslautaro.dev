@@ -1,1 +1,5 @@
-export type { ResumeSchema } from "@/features/resume-schema/types"
+import { parseResume } from "./parser"
+
+type ResumeSchema = ReturnType<typeof parseResume>
+
+export { parseResume, type ResumeSchema }

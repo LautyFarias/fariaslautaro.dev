@@ -1,15 +1,22 @@
 import type { ResumeSchema } from "@/features/resume-schema"
 import type { Props as ExperienceProps } from "./Experience.astro"
 
-export const serializeExperience = (
-  work: ResumeSchema["work"],
-): ExperienceProps => {
-  // TODO: validate using zod
+const serializeDates = (startDate: Date, endDate?: Date) => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+  }
 
-  const positions = work!.map((workItem) => ({
-    name: workItem.position ?? "",
-    description: workItem.description ?? "",
-    dateRange: `${workItem.startDate} - ${workItem.endDate ?? "Actualidad"}`,
+  return `${startDate.toLocaleString(undefined, options)} - ${endDate?.toLocaleString(undefined, options) ?? "Actualidad"}`
+}
+
+export const serializeExperience = (
+  works: ResumeSchema["work"],
+): ExperienceProps => {
+  const positions = works.map((work) => ({
+    name: work.position,
+    description: work.description ?? "",
+    dateRange: serializeDates(work.startDate, work.endDate),
   }))
 
   return {
