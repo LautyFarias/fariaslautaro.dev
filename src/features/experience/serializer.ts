@@ -5,6 +5,7 @@ const serializeDates = (startDate: Date, endDate?: Date) => {
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "2-digit",
+    timeZone: "UTC",
   }
 
   return `${startDate.toLocaleString(undefined, options)} - ${endDate?.toLocaleString(undefined, options) ?? "Actualidad"}`
