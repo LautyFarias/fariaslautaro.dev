@@ -1,0 +1,10 @@
+---
+interface Props {
+  class?: string
+}
+
+const { class: className = "h-4" } = Astro.props
+---
+
+<div class="ml-[4px] w-[1px] self-stretch bg-gray-400" class:list={[className]}>
+</div> 

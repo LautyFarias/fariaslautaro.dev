@@ -1,0 +1,34 @@
+---
+import Section from "@/components/ui/Section.astro"
+import {
+  ExperienceSeparator,
+  WorkGroup,
+  WorkPosition,
+} from "./index"
+import type { SerializedExperience } from '../types/experienceTypes'
+
+interface Props {
+  workGroups: SerializedExperience['workGroups']
+}
+
+const { workGroups } = Astro.props
+---
+
+<Section title="Experiencia">
+  {
+    workGroups.map(({ company, yearRange, positions }, index) => (
+      <>
+        {index > 0 && <ExperienceSeparator class="h-10" />}
+        <WorkGroup company={company} yearRange={yearRange}>
+          {positions.map(({ name, description, dateRange }) => (
+            <WorkPosition
+              position={name}
+              description={description}
+              dateRange={dateRange}
+            />
+          ))}
+        </WorkGroup>
+      </>
+    ))
+  }
+</Section> 
