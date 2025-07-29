@@ -1,6 +1,5 @@
 ---
-import { parseResume } from "@/features/resume-schema"
-import { PortfolioService } from "@/portfolio"
+import { PortfolioService, ResumeSchemaService } from "@/portfolio"
 import { EducationSection } from "@/portfolio/education"
 import { ExperienceSection } from "@/portfolio/experience"
 import { ProfileAbout, ProfileHero } from "@/portfolio/profile"
@@ -10,7 +9,7 @@ import Layout from "@/layouts/Layout.astro"
 
 import resume from "@resume"
 
-const resumeData = parseResume(resume)
+const resumeData = ResumeSchemaService.getResumeData(resume)
 const portfolioData = PortfolioService.getPortfolioData(resumeData)
 ---
 
