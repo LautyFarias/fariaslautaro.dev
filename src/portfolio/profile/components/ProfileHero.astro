@@ -1,10 +1,10 @@
 ---
-import GemIcon from "@/components/icons/Gem.astro"
-import GlobeIcon from "@/components/icons/Globe.astro"
-import Badge from "@/components/ui/Badge.astro"
+import GemIcon from "@/core/icons/Gem.astro"
+import GlobeIcon from "@/core/icons/Globe.astro"
+import Badge from "@/core/ui/Badge.astro"
 
-import HeroFooter from "./ProfileHeroFooter.astro"
 import type { ProfileHeroProps } from '../types/profileTypes'
+import HeroFooter from "./ProfileHeroFooter.astro"
 
 const { fullName, shortDescription, location, age, imagePath } = Astro.props as ProfileHeroProps
 ---

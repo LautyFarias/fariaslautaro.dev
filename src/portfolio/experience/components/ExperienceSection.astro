@@ -1,11 +1,11 @@
 ---
-import Section from "@/components/ui/Section.astro"
-import {
-  ExperienceSeparator,
-  WorkGroup,
-  WorkPosition,
-} from "./index"
+import Section from "@/core/ui/Section.astro"
 import type { SerializedExperience } from '../types/experienceTypes'
+import {
+ExperienceSeparator,
+WorkGroup,
+WorkPosition,
+} from "./index"
 
 interface Props {
   workGroups: SerializedExperience['workGroups']
