@@ -1,5 +1,5 @@
 ---
-import { PortfolioService, ResumeSchemaService } from "@/portfolio"
+import { PortfolioService } from "@/portfolio"
 import { EducationSection } from "@/portfolio/education"
 import { ExperienceSection } from "@/portfolio/experience"
 import { ProfileAbout, ProfileHero } from "@/portfolio/profile"
@@ -9,8 +9,7 @@ import Layout from "./_layouts/Layout.astro"
 
 import resume from "@resume"
 
-const resumeData = ResumeSchemaService.getResumeData(resume)
-const portfolioData = PortfolioService.getPortfolioData(resumeData)
+const portfolioData = PortfolioService.getPortfolioData(resume)
 ---
 
 <Layout title="Farias Lautaro" description="Yet another backend developer.">
@@ -18,7 +17,7 @@ const portfolioData = PortfolioService.getPortfolioData(resumeData)
     class="container mx-auto flex max-w-4xl flex-col gap-16 px-8 py-16 print:gap-4 print:p-6"
   >
     <ProfileHero {...portfolioData.profileHero} />
-    <ProfileAbout />
+    <ProfileAbout {...portfolioData.profileAbout} />
     <ExperienceSection {...portfolioData.experience} />
     <EducationSection education={portfolioData.education.education} />
     <SkillsSection />

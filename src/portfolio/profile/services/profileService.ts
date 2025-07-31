@@ -1,7 +1,8 @@
 // Profile Service
 // Business logic for profile operations
 
-import type { ProfileBasics, ProfileData } from '../types/profileTypes'
+
+import type { ProfileBasics, ProfileData } from "../types/profileTypes"
 
 export class ProfileService {
   /**
@@ -12,11 +13,14 @@ export class ProfileService {
     const birthDate = new Date(birthdate)
     let age = today.getFullYear() - birthDate.getFullYear()
     const monthDiff = today.getMonth() - birthDate.getMonth()
-    
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
       age--
     }
-    
+
     return age
   }
 
@@ -31,7 +35,7 @@ export class ProfileService {
   /**
    * Format location as text
    */
-  static formatLocation(location: ProfileBasics['location']): string {
+  static formatLocation(location: ProfileBasics["location"]): string {
     return `${location.region}, ${location.countryCode}`
   }
 
@@ -40,7 +44,7 @@ export class ProfileService {
    */
   static extractProfileData(resumeData: any): ProfileData {
     return {
-      basics: resumeData.basics
+      basics: resumeData.basics,
     }
   }
 
@@ -49,13 +53,31 @@ export class ProfileService {
    */
   static getProfileHeroProps(profileData: ProfileData) {
     const { basics } = profileData
-    
+
     return {
       fullName: basics.name,
-      shortDescription: basics.summary,
+      shortDescription: basics.label,
       location: this.formatLocation(basics.location),
       age: this.formatAge(basics.birthdate),
-      imagePath: basics.image
+      imagePath: basics.image,
     }
   }
-} 
+
+  /**
+   * Get profile about props
+   * Returns summary as array of paragraphs (split by double line breaks)
+   */
+  static getProfileAboutProps(profileData: ProfileData) {
+    const { basics } = profileData
+    // Split summary into paragraphs by double line breaks or single line breaks
+    const summaryParagraphs = basics.summary
+      ? basics.summary
+          .split(/\n\s*\n|(?<!\n)\n(?!\n)/)
+          .map((p) => p.trim())
+          .filter(Boolean)
+      : []
+    return {
+      summary: summaryParagraphs,
+    }
+  }
+}
