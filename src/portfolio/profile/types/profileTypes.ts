@@ -4,16 +4,17 @@
 export interface ProfileBasics {
   name: string
   summary: string
+  birthdate: string
   image: string
   phone: string
   email: string
   url: string
-  label?: string
+  label: string
   location: {
-    address?: string
-    city?: string
+    address: string
+    city: string
     countryCode: string
-    postalCode?: string
+    postalCode: string
     region: string
   }
   profiles: Profile[]
