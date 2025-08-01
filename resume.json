@@ -30,7 +30,7 @@
   },
   "education": [
     {
-      "area": "Programación",
+      "area": "",
       "institution": "E.E.S.T Nº7 José Hernández",
       "score": "",
       "courses": [
@@ -74,23 +74,34 @@
     {
       "summary": "",
       "highlights": [],
-      "name": "SimpliMuv",
-      "description": "Para el desarrollo de la nueva versión, basada en microservicios, me desempeñé en la definición de requerimientos técnicos y supervisé el desarrollo, asegurando la calidad del código. Junto al equipo de backend, fomentamos el pensamiento crítico y la utilización de patrones de desarrollo orientados a una arquitectura DDD. Fomenté el diálogo y la participación en el equipo de frontend, logrando que juntos definiéramos una arquitectura a seguir. Perfeccionamos, con el equipo de management, nuestra metodología, estableciendo metas claras, tiempos de planificación y refinamiento, e implementando distintas métricas.",
+      "name": "itti",
+      "description": "Como Sr., participé en la digitalización de los préstamos para vivienda, aportando en la arquitectura. Tuve un rol activo en la organización del equipo, colaborando en decisiones técnicas, buenas prácticas y soporte funcional, con foco en eficiencia y calidad. Contribuí al mantenimiento y evolución del producto de compra de deuda y a la segunda versión de los préstamos Che Róga Porã.",
+      "startDate": "2025-05",
       "location": "Remoto",
-      "position": "Líder técnico",
-      "url": "https://simplimuv.com/",
-      "startDate": "2024-01"
+      "position": "Sr. Software Engineer",
+      "url": "https://www.itti.digital/"
     },
     {
       "summary": "",
       "highlights": [],
-      "endDate": "2024-01",
-      "name": "SimpliMuv",
-      "description": "Desarrollo de la versión 2 de SimpliMuv, implementada en +10 clientes. Contribuí a la organización y planificación del equipo bajo una metodología SCRUM, desarrollando y dividiendo tareas, asegurándome que mis compañeros pudieran resolver los requerimientos, dando el soporte necesario.",
+      "name": "itti",
+      "description": "Desarrollo del backoffice para la gestión operativa del desembolso de la iniciativa de compra de deuda del banco ueno. Posteriormente, lideré la integración entre los equipos de préstamos y transferencias para implementar la solución de saldar la deuda.",
+      "startDate": "2024-09",
+      "endDate": "2025-05",
       "location": "Remoto",
-      "position": "Referente técnico",
+      "position": "Ssr. Software Engineer",
+      "url": "https://www.itti.digital/"
+    },
+    {
+      "summary": "",
+      "highlights": [],
+      "name": "SimpliMuv",
+      "description": "Para el desarrollo de la nueva versión, basada en microservicios, junto al equipo de backend, fomentamos el pensamiento crítico y la utilización de patrones de desarrollo orientados a una arquitectura DDD. Fomenté el diálogo y la participación en el equipo de frontend, logrando que juntos definiéramos una arquitectura a seguir. Perfeccionamos, con el equipo de management, nuestra metodología, estableciendo metas claras, tiempos de planificación y refinamiento, e implementando distintas métricas.",
+      "location": "Remoto",
+      "position": "Líder técnico",
       "url": "https://simplimuv.com/",
-      "startDate": "2022-06"
+      "startDate": "2022-06",
+      "endDate": "2024-09"
     },
     {
       "summary": "",
