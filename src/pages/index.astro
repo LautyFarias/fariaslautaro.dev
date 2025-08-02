@@ -20,7 +20,7 @@ const portfolioData = PortfolioService.getPortfolioData(resume)
     <ProfileAbout {...portfolioData.profileAbout} />
     <ExperienceSection {...portfolioData.experience} />
     <EducationSection education={portfolioData.education.education} />
-    <SkillsSection />
+    <SkillsSection skills={portfolioData.skills.skills} />
     <!-- <ProjectsSection projects={portfolioData.projects.projects} /> -->
   </main>
 </Layout>

@@ -75,7 +75,7 @@
       "summary": "",
       "highlights": [],
       "name": "itti",
-      "description": "Como Sr., participé en la digitalización de los préstamos para vivienda, aportando en la arquitectura. Tuve un rol activo en la organización del equipo, colaborando en decisiones técnicas, buenas prácticas y soporte funcional, con foco en eficiencia y calidad. Contribuí al mantenimiento y evolución del producto de compra de deuda y a la segunda versión de los préstamos Che Róga Porã.",
+      "description": "Como Sr., participé en la digitalización de los préstamos para vivienda, aportando en la arquitectura. Tuve un rol activo en la organización del equipo, colaborando en decisiones técnicas, buenas prácticas y soporte funcional, con foco en eficiencia y calidad. Contribuí al mantenimiento y evolución del producto de compra de deuda y a la segunda versión de los préstamos Che Róga Porã coordinando el desarrollo e2e.",
       "startDate": "2025-05",
       "location": "Remoto",
       "position": "Sr. Software Engineer",
@@ -85,7 +85,7 @@
       "summary": "",
       "highlights": [],
       "name": "itti",
-      "description": "Desarrollo del backoffice para la gestión operativa del desembolso de la iniciativa de compra de deuda del banco ueno. Posteriormente, lideré la integración entre los equipos de préstamos y transferencias para implementar la solución de saldar la deuda.",
+      "description": "Co-owner del microfrontend del backoffice para préstamos para la gestión del desembolso de la iniciativa de compra de deuda del banco ueno. Posteriormente, lideré la integración entre los equipos de préstamos y transferencias para implementar la solución del saldo de deuda.",
       "startDate": "2024-09",
       "endDate": "2025-05",
       "location": "Remoto",
@@ -117,39 +117,29 @@
   ],
   "skills": [
     {
-      "keywords": ["Work experience"],
+      "keywords": [],
       "level": "Senior",
-      "name": "Python"
+      "name": "Python/Django/FastAPI"
     },
     {
-      "keywords": ["Work experience", "Python"],
+      "keywords": [],
       "level": "Senior",
-      "name": "Django"
+      "name": "Java/Kotlin/Spring"
     },
     {
-      "keywords": ["Work experience", "Python"],
+      "keywords": [],
       "level": "Senior",
-      "name": "FastAPI"
+      "name": "TypeScript"
     },
     {
-      "keywords": ["Work experience"],
+      "keywords": [],
       "level": "Senior",
-      "name": "JavaScript"
+      "name": "Node.js"
     },
     {
-      "keywords": ["Self-taught experience"],
-      "level": "-",
-      "name": "NodeJS"
-    },
-    {
-      "keywords": ["Self-taught experience"],
-      "level": "-",
-      "name": "React"
-    },
-    {
-      "keywords": ["Self-taught experience"],
-      "level": "-",
-      "name": "Tailwind CSS"
+      "keywords": [],
+      "level": "Middle",
+      "name": "Go"
     }
   ],
   "volunteer": [],

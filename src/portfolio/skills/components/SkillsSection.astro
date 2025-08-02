@@ -1,47 +1,23 @@
 ---
-import Backpack from "@/core/icons/Backpack.astro"
-import Home from "@/core/icons/Home.astro"
 import { NotPrintable } from "@/core/print"
 import Badge from "@/core/ui/Badge.astro"
 import Section from "@/core/ui/Section.astro"
-import { Paragraph, TextVariant } from "@/core/ui/text"
 
-const KnowledgeIcon = Object.freeze({
-  work: Backpack,
-  selfTaught: Home,
-})
+interface Skill {
+  name: string
+}
 
-const skills = [
-  { name: "Python", icon: KnowledgeIcon.work },
-  { name: "Django", icon: KnowledgeIcon.work },
-  { name: "FastAPI", icon: KnowledgeIcon.work },
-  { name: "JavaScript", icon: KnowledgeIcon.work },
-  { name: "React", icon: KnowledgeIcon.selfTaught },
-  { name: "Astro", icon: KnowledgeIcon.selfTaught },
-  { name: "Tailwind CSS", icon: KnowledgeIcon.selfTaught },
-]
+interface Props {
+  skills: Skill[]
+}
+
+const { skills } = Astro.props as Props
 ---
 
-<Section title="Skills" class="flex flex-col gap-2">
-  <NotPrintable class="flex gap-6 py-2">
-    <Paragraph variant={TextVariant.Secondary}>
-      <span class="flex gap-2">
-        <KnowledgeIcon.work />Experiencia de trabajo
-      </span>
-    </Paragraph>
-    <Paragraph variant={TextVariant.Secondary}>
-      <span class="flex gap-2">
-        <KnowledgeIcon.selfTaught />Experiencia Autodidacta
-      </span>
-    </Paragraph>
-  </NotPrintable>
-  <div class="flex flex-wrap gap-2">
-    {
-      skills.map((skill) => (
-        <Badge>
-          <skill.icon slot="icon" /> {skill.name}
-        </Badge>
-      ))
-    }
-  </div>
-</Section> 
+<NotPrintable>
+  <Section title="Skills" class="flex flex-col gap-2">
+    <div class="flex flex-wrap gap-2">
+      {skills.map((skill) => <Badge>{skill.name}</Badge>)}
+    </div>
+  </Section>
+</NotPrintable>
